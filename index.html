@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Access Hub</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Dark gradient background */
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Ambient Background Circles */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            animation: float 10s infinite ease-in-out;
+        }
+
+        .c1 {
+            width: 300px;
+            height: 300px;
+            background: #e94560;
+            top: -50px;
+            left: -50px;
+        }
+
+        .c2 {
+            width: 400px;
+            height: 400px;
+            background: #0f3460;
+            bottom: -100px;
+            right: -100px;
+        }
+
+        /* Glass Card Container */
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        h1 {
+            margin-bottom: 2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        /* Link Buttons */
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .link-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Specific Colors for differentiation (Optional) */
+        .game-link:hover {
+            border-color: #e94560;
+        }
+
+        .data-link:hover {
+            border-color: #4cd137;
+        }
+
+        /* Animation Keyframes */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(20px, 30px); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+
+    <div class="container">
+        <h1>Quick Access</h1>
+        
+        <a href="https://drive.google.com/file/d/1POLXRVzTQEkOByjUs77AI06DNEQ8fPju/view?usp=drive_link" class="link-btn game-link" target="_blank">
+            🎮 Getting Over It
+        </a>
+
+        <a href="https://drive.google.com/drive/folders/1clj_pukhxJCL8fRE_0zjChYAKHS1suaK?usp=drive_link" class="link-btn data-link" target="_blank">
+            📂 Dataset
+        </a>
+    </div>
+
+</body>
+</html>
